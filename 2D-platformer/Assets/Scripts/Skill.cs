@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//For different skillAttributes
 public class Skill : MonoBehaviour
 {
    public string skillName;
@@ -9,6 +10,9 @@ public class Skill : MonoBehaviour
 
    [TextArea(1,3)]
    public string skillDes;
-
+   
+   public int requiredSkillPoint;
+   public bool isUnlocked;
+   public int requiredUpgredingSkillPoint;
    public bool isUpgrade;
 }
