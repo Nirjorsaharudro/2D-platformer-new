@@ -38,6 +38,7 @@ public class skillButton : MonoBehaviour
             //Debug.Log(val);
             skCount.GetComponent<Text>().text = val;   
         }
+        
     }
     
     //For upgrading or unlocking panel activation
@@ -51,7 +52,8 @@ public class skillButton : MonoBehaviour
             unlockButton.SetActive(true);
         }
         skillManager.instance.activatedSkill = transform.GetComponent<Skill>();
-
+        skillManager.instance.canNotUnlockPanel.SetActive(false);
+        skillManager.instance.notEnoughSpPanel.SetActive(false);
         skillImage.sprite = skillManager.instance.skills[skillButtonId].skillSprite;
         skillNameText.text = skillManager.instance.skills[skillButtonId].skillName;
         skillDesText.text = skillManager.instance.skills[skillButtonId].skillDes; 

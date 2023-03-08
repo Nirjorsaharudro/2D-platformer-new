@@ -10,7 +10,8 @@ public class Skill : MonoBehaviour
 
    [TextArea(1,3)]
    public string skillDes;
-   
+
+   public Skill parentSkill;
    public int requiredSkillPoint;
    public bool isUnlocked;
    public int requiredUpgredingSkillPoint;
